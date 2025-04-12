@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "fbfd3d1e-46cf-4bb8-b1ad-03a25f62d185",
+		"name": "Green Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "36173036"
+	},
+	"item": [
+		{
+			"name": "Invoices",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/jonathan/Downloads/boletos.pdf"
+						}
+					]
+				},
+				"url": "{{4000}}/invoices/"
+			},
+			"response": []
+		},
+		{
+			"name": "Invoices?relatorio=1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/jonathan/Downloads/boletos.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{4000}}/invoices?relatorio=1",
+					"host": [
+						"{{4000}}"
+					],
+					"path": [
+						"invoices"
+					],
+					"query": [
+						{
+							"key": "relatorio",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Import CSV",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/jonathan/Downloads/boletos.csv"
+						}
+					]
+				},
+				"url": "{{4000}}/invoices/import"
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Invoices",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/jonathan/Downloads/boletos.pdf"
+						}
+					]
+				},
+				"url": "{{4000}}/invoices/upload"
+			},
+			"response": []
+		}
+	]
+}
