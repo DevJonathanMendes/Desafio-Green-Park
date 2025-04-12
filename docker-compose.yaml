@@ -1,0 +1,21 @@
+# FOR DEVELOPMENT ONLY.
+
+services:
+  postgres:
+    container_name: postgres_green
+    image: postgres:latest
+    env_file: .env
+    volumes:
+       - postgres:/data/postgres
+    ports:
+      - ${POSTGRES_PORT}:${POSTGRES_PORT}
+    networks:
+      - postgres
+    restart: unless-stopped
+ 
+networks:
+  postgres:
+    driver: bridge
+
+volumes:
+    postgres:
