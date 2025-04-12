@@ -22,7 +22,7 @@ import { InvoicesModule } from './invoices/invoices.module';
           ////////////////////////
           // Para desenvolvimento.
           synchronize: true, // Não use em produção.
-          dropSchema: true, // Pode acontecer erros de upload dos pdf's, pois haverá limpado os invoices.
+          // dropSchema: true, // Pode acontecer erros de upload dos pdf's, pois haverá limpado os invoices.
           migrationsRun: true,
           migrations: [__dirname + '/migrations/*.{js,ts}'],
           // logging: true,
